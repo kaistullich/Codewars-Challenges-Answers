@@ -17,29 +17,34 @@ def to_camel_case(text):
     elif text[0].isupper():
         return ''.join(striped)
     else:
-        camelWord = striped[0]
+        camelWordFirstWord = striped[0]
         for word in striped[1::]:
             if word.islower():
                 word = word.title()
-                camelWord += word
+                camelWordFirstWord += word
             else:
-                camelWord += word
-        return camelWord
+                camelWordFirstWord += word
+        return camelWordFirstWord
 
 
 if __name__ == '__main__':
     # returns "theStealthWarrior"
-    to_camel_case("the-stealth-warrior")
+    stealth = to_camel_case("the-stealth-warrior")
+    print(stealth)
 
     # returns "TheStealthWarrior"
-    to_camel_case("The_Stealth_Warrior")
+    stealth1 = to_camel_case("The_Stealth_Warrior")
+    print(stealth1)
 
     # returns ''
-    to_camel_case('')
+    none = ('')
+    print(none)
 
     # returns ABC
-    to_camel_case('A-B-C')
+    abc = to_camel_case('A-B-C')
+    print(abc)
 
     # returns ThePippiWasHungry
-    x = to_camel_case('The-pippi-was_Hungry')
-    print(x)
+    # FIXME: this is not camel casing correctly. Output should be = ThePippiWasHungry : Currently = ThepippiwasHungry
+    pippi = to_camel_case('The-pippi-was_Hungry')
+    print(pippi)
