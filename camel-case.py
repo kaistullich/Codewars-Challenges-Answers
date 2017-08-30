@@ -12,7 +12,7 @@ def to_camel_case(text):
 
     striped = re.split('-+|_+', text)
 
-    if text == '':
+    if not text:
         return ''
     elif text[0].isupper():
         return ''.join(striped)
