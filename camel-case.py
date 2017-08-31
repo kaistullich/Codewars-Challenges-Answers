@@ -51,25 +51,3 @@ def test_to_camel_case():
     assert to_camel_case('') == ''
     assert to_camel_case('A-B-C') == 'Abc'
     assert to_camel_case('The-pippi-was_Hungry') == 'ThePippiWasHungry'
-
-if __name__ == '__main__':
-    # returns "theStealthWarrior"
-    stealth = to_camel_case("the-stealth-warrior")
-    print(stealth)
-
-    # returns "TheStealthWarrior"
-    stealth1 = to_camel_case("The_Stealth_Warrior")
-    print(stealth1)
-
-    # returns ''
-    none = to_camel_case('')
-    print(none)
-
-    # returns ABC
-    abc = to_camel_case('A-B-C')
-    print(abc)
-
-    # returns ThePippiWasHungry
-    # FIXME: this is not camel casing correctly. Output should be = ThePippiWasHungry : Currently = ThepippiwasHungry
-    pippi = to_camel_case('The-pippi-was_Hungry')
-    print(pippi)
