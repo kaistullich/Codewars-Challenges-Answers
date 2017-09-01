@@ -11,8 +11,15 @@ def findSmallestInt(arr):
     :param arr: array of numbers
     :return: array with smallest number removed
     """
-    return 0
+    smallest_int = min(arr)
+
+    for num in arr:
+        if num > smallest_int:
+            smallest_int = num
+
+    return smallest_int
 
 
 if __name__ == '__main__':
     findSmallestInt([78, 56, 232, 12, 11, 43])
+    findSmallestInt([34, -345, -1, 100])

@@ -40,13 +40,9 @@ def solution(string):
             if splitStringList[counter] == letter:
                 tempStr += letter + '_'
             counter += 1
-
     print(letterList)
 
 
-if __name__ == '__main__':
-    # should return ['al', 'ex]
-    solution('alexis')
-
-    # # should return ['ab', 'cd', 'ef']
-    solution('abcdefg')
+def test_solution():
+    assert solution('Alexis') == ['Al', 'ex', 'is']
+    assert solution('Jim') == ['Ji', 'm_']

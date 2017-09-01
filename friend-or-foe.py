@@ -9,3 +9,4 @@ def friend(f):
     :param f:
     :return:
     """
+    pass

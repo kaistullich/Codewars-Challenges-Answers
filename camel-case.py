@@ -9,13 +9,9 @@ def to_camel_case(text):
     Examples:
 
         to_camel_case("the-stealth-warrior") # returns "theStealthWarrior"
-
         to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
-
         to_camel_case('') # returns ''
-
         to_camel_case('A-B-C') # returns ABC
-
         to_camel_case('The-pippi-was_Hungry') # returns ThePippiWasHungry
 
     :param text: a word [str]
