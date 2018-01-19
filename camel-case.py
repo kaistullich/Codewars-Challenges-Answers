@@ -1,7 +1,7 @@
 import re
 
 
-def to_camel_case(text):
+def to_camel_case(text: str) -> str:
     """
     Complete the method/function so that it converts dash/underscore delimited words into camel casing.
     The first word within the output should be capitalized only if the original word was capitalized.

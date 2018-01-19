@@ -9,4 +9,19 @@ def friend(f):
     :param f:
     :return:
     """
-    pass
+    lowered = [name.lower() for name in f]
+    friends = ['jason', 'alex', 'bob']
+    friendList = list()
+
+    for name in lowered:
+        if name in friends:
+            friendList.append(name)
+        elif len(name) == 4:
+            friendList.append(name)
+
+    return friendList
+
+
+if __name__ == '__main__':
+    print(friend(['Holdan', 'Bob','Jason', 'bigewh', 'fhre']))
+    print(friend(["Ryan", "Kieran", "Jason", "Yous"]))

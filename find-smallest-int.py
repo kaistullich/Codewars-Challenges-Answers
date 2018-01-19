@@ -12,6 +12,7 @@ def findSmallestInt(arr):
     :return: array with smallest number removed
     """
     smallest_int = min(arr)
+    print(smallest_int)
 
     for num in arr:
         if num > smallest_int:
